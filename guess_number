@@ -1,0 +1,24 @@
+#include <iostream>
+#include <time.h>
+
+int main() {
+    srand(time(NULL));
+
+    int b = 1 + rand() % 10;
+
+    std::cout << "A number from 1 to 10 is guessed." << std::endl;
+
+    int a, res;
+    std::cout << "Your number: ";
+    std::cin >> a;
+
+    if (a == b) {
+        std::cout << "Right: " << a << std::endl;
+        std::cout << "The number was: " << b;
+    } 
+    else {
+        std::cout << "Didn't guess, the number was: " << b;
+    }
+
+    return 0;
+}
