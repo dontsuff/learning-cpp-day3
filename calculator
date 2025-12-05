@@ -1,0 +1,46 @@
+#include <iostream>
+
+int main() {
+
+    std::cout << "Calculator" << std::endl;
+
+    float num1, num2, res;
+
+    std::cout << "Enter the first number: ";
+    std::cin >> num1;
+
+    std::cout << "Enter the second number: ";
+    std::cin >> num2;
+
+    char math;
+
+    std::cout << "Enter the math symbol (+, -, *, /): ";
+    std::cin >> math;
+
+    if (math == '+') {
+        res = num1 + num2;
+        std::cout << "Result: " << res;
+    }
+    else if (math == '-') {
+        res = num1 - num2;
+        std::cout << "Result: " << res;
+    }
+    else if (math == '*') {
+        res = num1 * num2;
+        std::cout << "Result: " << res;
+    }
+    else if (math == '/') {
+        if (num2 == 0) {
+            std::cout << "Error: division by zero!";
+        }
+        else {
+            res = num1 / num2;
+            std::cout << "Result: " << res;
+        }
+    }
+    else {
+        std::cout << "ERROR: Unknown symbol.";
+    }
+
+    return 0;
+}
